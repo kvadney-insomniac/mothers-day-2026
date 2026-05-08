@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0508">
+  <title>お母さんへ — 母の日おめでとうございます 🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sakura canvas (fixed, behind everything) -->
+  <canvas id="sakura-canvas" aria-hidden="true"></canvas>
+
+  <!-- ─────────────────────────────────────────
+       SECTION 1 — HERO
+  ───────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-bg-orb orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-text">母の日</span>
+        <span class="badge-year">2026</span>
+      </div>
+
+      <h1 class="hero-title" id="hero-title" aria-label="お母さんへ"></h1>
+
+      <p class="hero-subtitle" id="hero-subtitle">
+        母の日おめでとうございます
+      </p>
+
+      <div class="hero-bloom" aria-hidden="true">🌸</div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-label">scroll</span>
+      </div>
+    </div>
+
+    <!-- Floating accent icons -->
+    <div class="float-icon tennis-float" aria-hidden="true">🎾</div>
+    <div class="float-icon paw-float" aria-hidden="true">🐾</div>
+    <div class="float-icon blossom-float" aria-hidden="true">🌸</div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       SECTION 2 — FAMILY PORTRAIT
+  ───────────────────────────────────────── -->
+  <section class="photo-section family-section" id="family">
+    <div class="reveal-wrap">
+      <div class="photo-card photo-card--full">
+        <div class="photo-inner">
+          <img
+            src="img/family-christmas.jpg"
+            alt="家族みんなで"
+            class="photo-img"
+            loading="lazy"
+            onerror="this.closest('.photo-inner').classList.add('no-photo')"
+          >
+          <div class="photo-placeholder" aria-hidden="true">🌲</div>
+        </div>
+        <div class="photo-glow" aria-hidden="true"></div>
+      </div>
+      <div class="photo-caption">
+        <p class="caption-line">家族の時間は、</p>
+        <p class="caption-line">一番大切な宝物です</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       SECTION 3 — THE LETTER + CAT PHOTO
+  ───────────────────────────────────────── -->
+  <section class="letter-section" id="letter">
+    <div class="letter-wrap">
+
+      <!-- Cat photo + animated cat -->
+      <div class="cat-cluster">
+        <div class="cat-photo-ring">
+          <img
+            src="img/mom-kitten.jpg"
+            alt="猫と一緒のお母さん"
+            class="cat-photo"
+            loading="lazy"
+            onerror="this.closest('.cat-photo-ring').classList.add('no-photo')"
+          >
+          <div class="photo-placeholder" aria-hidden="true">🐱</div>
+        </div>
+
+        <!-- Pure CSS animated cat -->
+        <div class="css-cat" aria-hidden="true">
+          <div class="cat-head">
+            <div class="cat-ear cat-ear--left">
+              <div class="cat-ear-inner"></div>
+            </div>
+            <div class="cat-ear cat-ear--right">
+              <div class="cat-ear-inner"></div>
+            </div>
+            <div class="cat-eyes">
+              <div class="cat-eye cat-eye--left"></div>
+              <div class="cat-eye cat-eye--right"></div>
+            </div>
+            <div class="cat-nose"></div>
+            <div class="cat-mouth"></div>
+          </div>
+          <div class="cat-body">
+            <div class="cat-tail"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Letter text -->
+      <div class="letter-scroll-area">
+        <div class="letter-header">お母さんへ</div>
+
+        <div class="letter-stanza stanza-1">
+          <p>あなたはテニスコートで</p>
+          <p>最後の一球まで諦めない。</p>
+          <p>その粘り強さと情熱が、</p>
+          <p>「諦めないこと」の本当の意味を</p>
+          <p>息子の僕に教えてくれました。</p>
+        </div>
+
+        <div class="paw-divider" aria-hidden="true">
+          <span>🐾</span><span>🐾</span><span>🐾</span>
+        </div>
+
+        <div class="letter-stanza stanza-2">
+          <p>「ザ・チョーズン」を二人で見るとき、</p>
+          <p>どれだけ嬉しいか、言葉では伝えきれません。</p>
+        </div>
+
+        <div class="paw-divider" aria-hidden="true">
+          <span>🐾</span><span>🐾</span><span>🐾</span>
+        </div>
+
+        <div class="letter-stanza stanza-3">
+          <p>猫を抱くあなたの笑顔は、</p>
+          <p>この世界で一番やさしい表情です。</p>
+          <p>その笑顔に、何度救われてきたか知れません。</p>
+        </div>
+
+        <div class="paw-divider" aria-hidden="true">
+          <span>🐾</span><span>🐾</span><span>🐾</span>
+        </div>
+
+        <div class="letter-stanza stanza-4">
+          <p>お母さんとして、</p>
+          <p>いつも側にいてくれてありがとう。</p>
+          <p>あなたのような母のもとに生まれたことが、</p>
+          <p>誇りに思うことです。</p>
+        </div>
+
+        <div class="paw-divider" aria-hidden="true">
+          <span>🐾</span><span>🐾</span><span>🐾</span>
+        </div>
+
+        <div class="letter-stanza stanza-5 stanza-closing">
+          <p>母の日おめでとうございます。</p>
+          <p>いつまでも、心から感謝しています。</p>
+        </div>
+
+        <div class="letter-signature">
+          <p>愛を込めて、ケンタロウより</p>
+          <p class="sig-date">2026年5月8日</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       SECTION 4 — TENNIS
+  ───────────────────────────────────────── -->
+  <section class="tennis-section" id="tennis">
+    <!-- Court line texture -->
+    <div class="court-lines" aria-hidden="true">
+      <div class="court-line court-line--h1"></div>
+      <div class="court-line court-line--h2"></div>
+      <div class="court-line court-line--v"></div>
+      <div class="court-line court-line--net"></div>
+    </div>
+
+    <!-- Bouncing ball -->
+    <div class="ball-track" aria-hidden="true">
+      <div class="tennis-ball-anim" id="tennisBall">🎾</div>
+    </div>
+
+    <div class="tennis-content reveal-wrap">
+      <div class="photo-card photo-card--tennis">
+        <div class="photo-inner">
+          <img
+            src="img/patio-dinner.jpg"
+            alt="一緒に過ごす時間"
+            class="photo-img"
+            loading="lazy"
+            onerror="this.closest('.photo-inner').classList.add('no-photo')"
+          >
+          <div class="photo-placeholder" aria-hidden="true">🎾</div>
+        </div>
+        <div class="photo-glow" aria-hidden="true"></div>
+      </div>
+
+      <div class="tennis-text">
+        <div class="section-eyebrow">お母さんの情熱</div>
+        <p class="section-body">テニスコートでの情熱と粘り強さ、</p>
+        <p class="section-body">それがあなたの生き方そのものです</p>
+        <div class="racket-accent" aria-hidden="true">🎾</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       SECTION 5 — THE CHOSEN / FAITH
+  ───────────────────────────────────────── -->
+  <section class="chosen-section" id="chosen">
+    <!-- Lantern decorations -->
+    <div class="lanterns" aria-hidden="true">
+      <div class="lantern lantern-1"></div>
+      <div class="lantern lantern-2"></div>
+      <div class="lantern lantern-3"></div>
+    </div>
+
+    <div class="chosen-content reveal-wrap">
+      <div class="photo-card photo-card--night">
+        <div class="photo-inner">
+          <img
+            src="img/waterfront-night.jpg"
+            alt="夜の散歩"
+            class="photo-img"
+            loading="lazy"
+            onerror="this.closest('.photo-inner').classList.add('no-photo')"
+          >
+          <div class="photo-placeholder" aria-hidden="true">🌙</div>
+        </div>
+        <div class="photo-glow photo-glow--blue" aria-hidden="true"></div>
+      </div>
+
+      <div class="chosen-text-block">
+        <div class="section-eyebrow">一緒に見た映画</div>
+        <p class="section-body">「ザ・チョーズン」を二人で見た夜は、</p>
+        <p class="section-body">僕にとってかけがえない時間でした。</p>
+        <p class="section-body">お母さんが一緒にいてくれたから。</p>
+
+        <div class="verse-block">
+          <div class="ichthys" aria-hidden="true">✦</div>
+          <blockquote class="verse-quote">
+            <p>「友のためにいのちを捨てること、</p>
+            <p>これよりも大きな愛はない」</p>
+          </blockquote>
+          <cite class="verse-ref">ヨハネ 15:13</cite>
+          <p class="verse-personal">— 僕が大切にしている言葉です</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       SECTION 6 — PHOTO GALLERY
+  ───────────────────────────────────────── -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-header reveal-wrap">
+      <h2 class="gallery-title">思い出の瞬間</h2>
+      <div class="gallery-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-card reveal-wrap">
+        <div class="gallery-photo-wrap">
+          <img
+            src="img/marina-boat.jpg"
+            alt="マリーナで"
+            loading="lazy"
+            onerror="this.closest('.gallery-photo-wrap').classList.add('no-photo')"
+          >
+          <div class="photo-placeholder" aria-hidden="true">⛵</div>
+        </div>
+        <div class="gallery-caption">夜の海で</div>
+      </div>
+
+      <div class="gallery-card reveal-wrap">
+        <div class="gallery-photo-wrap">
+          <img
+            src="img/family-christmas.jpg"
+            alt="クリスマス"
+            loading="lazy"
+            onerror="this.closest('.gallery-photo-wrap').classList.add('no-photo')"
+          >
+          <div class="photo-placeholder" aria-hidden="true">🎄</div>
+        </div>
+        <div class="gallery-caption">家族みんなで</div>
+      </div>
+
+      <div class="gallery-card reveal-wrap">
+        <div class="gallery-photo-wrap">
+          <img
+            src="img/patio-dinner.jpg"
+            alt="お外で食事"
+            loading="lazy"
+            onerror="this.closest('.gallery-photo-wrap').classList.add('no-photo')"
+          >
+          <div class="photo-placeholder" aria-hidden="true">🌿</div>
+        </div>
+        <div class="gallery-caption">お気に入りの場所</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       SECTION 7 — CLOSING
+  ───────────────────────────────────────── -->
+  <section class="closing-section" id="closing">
+    <div class="hearts-container" id="heartsContainer" aria-hidden="true"></div>
+
+    <div class="closing-content reveal-wrap">
+      <div class="closing-kanji" id="closingKanji">愛</div>
+      <p class="closing-main">いつまでも、心から</p>
+      <p class="closing-main">感謝しています</p>
+      <div class="closing-sig">
+        <span>ケンタロウより</span>
+        <span class="sig-bloom">🌸</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       FOOTER
+  ───────────────────────────────────────── -->
+  <footer class="site-footer">
+    <svg class="branch-svg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,65 Q60,20 120,45 Q180,70 240,30 Q280,10 320,25"
+            stroke="#d4748a" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <!-- Blossoms along branch -->
+      <g opacity="0.8">
+        <circle cx="60" cy="30" r="5" fill="#f0b8c8"/>
+        <circle cx="65" cy="24" r="4" fill="#f4c8d0"/>
+        <circle cx="71" cy="30" r="4" fill="#e8a4b8"/>
+      </g>
+      <g opacity="0.7">
+        <circle cx="155" cy="52" r="5" fill="#f0b8c8"/>
+        <circle cx="161" cy="46" r="4" fill="#f4c8d0"/>
+        <circle cx="149" cy="48" r="3" fill="#e8a4b8"/>
+      </g>
+      <g opacity="0.75">
+        <circle cx="240" cy="34" r="5" fill="#f0b8c8"/>
+        <circle cx="246" cy="28" r="4" fill="#f4c8d0"/>
+        <circle cx="234" cy="30" r="3" fill="#e8a4b8"/>
+      </g>
+    </svg>
+    <p class="footer-date">2026年5月8日 母の日</p>
+    <p class="footer-love">❤️ made with love, for お母さん</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
